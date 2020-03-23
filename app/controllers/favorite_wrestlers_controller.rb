@@ -1,0 +1,2 @@
+class FavoriteWrestlersController < ApplicationController
+end
