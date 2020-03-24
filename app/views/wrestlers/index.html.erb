@@ -1,4 +1,6 @@
-<h1> Wrestler Profiles </h1>
+<p><%= link_to "Add a Wrestler to the Website", new_wrestler_path %> * <%= link_to "See List of Moves", moves_path %> </p>
+
+<h1> Wrestlers </h1>
 <% @wrestlers.each do |wrestler| %>
 <h3> <%= link_to wrestler.name, wrestler_path(wrestler.id) %> </h3>
 <% end %>

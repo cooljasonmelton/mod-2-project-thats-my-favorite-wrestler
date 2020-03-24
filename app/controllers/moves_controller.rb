@@ -1,7 +1,7 @@
 class MovesController < ApplicationController
 
     def index
-        @moves = Move.all
+        @moves = Move.sort_move_by_name
     end 
 
     def show

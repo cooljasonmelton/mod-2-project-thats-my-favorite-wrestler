@@ -1,7 +1,7 @@
 class WrestlersController < ApplicationController
 
     def index
-        @wrestlers = Wrestler.all
+        @wrestlers = Wrestler.sort_wrestler_by_name
     end 
 
     def show
