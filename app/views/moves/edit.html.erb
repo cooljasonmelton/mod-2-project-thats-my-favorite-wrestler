@@ -1,4 +1,4 @@
-<h1> Edit Wrestling Move </h1>
+<h1> Edit <%= @move.name %> </h1>
 
 <%= form_for @move do |f| %>
     <%= f.label :name, 'Move Name:' %><br>
@@ -9,3 +9,5 @@
     <%= f.text_field :img_url %><br>
     <%= f.submit %>
 <% end %>
+
+<p><%= link_to "Back to Wrestling Moves", moves_path %> </p>

@@ -2,6 +2,7 @@
 <h1>Name: <%= @move.name %></h1>
 <h3>Description: <%= @move.description %></h3>
 <img src=<%= @move.img_url %> alt="move" >
+<p><%= link_to "Edit #{@move.name}", edit_move_path %> </p>
 
 <p><%= link_to "Back to Wrestling Moves", moves_path %> </p>
 

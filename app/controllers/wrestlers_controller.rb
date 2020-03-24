@@ -24,9 +24,18 @@ class WrestlersController < ApplicationController
     end 
 
     def edit
+        find_wrestler
     end
 
     def update
+        find_wrestler.assign_attributes(wrestler_params)
+        if @wrestler.valid?
+            @wrestler.save
+            redirect_to wrestler_path(@wrestler)
+        else 
+            # @errors
+            render :new
+        end 
     end
 
     private
