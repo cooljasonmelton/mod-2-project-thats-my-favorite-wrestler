@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :wrestlers, except: :destroy 
   resources :users
 
+  get "/login", to: "sessions#new"
+  delete "/logout", to: "sessions#destroy"
+  #get "/", to: "application#welcome"
   
   #resources :favorite_wrestlers
   #resources :favorite_moves
