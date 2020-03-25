@@ -1,4 +1,6 @@
 class MovesController < ApplicationController
+    before_action :authorized
+    skip_before_action :authorized, only: [:index, :show]
 
     def index
         @moves = Move.sort_move_by_name

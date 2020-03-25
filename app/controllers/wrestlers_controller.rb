@@ -1,4 +1,6 @@
 class WrestlersController < ApplicationController
+    before_action :authorized
+    skip_before_action :authorized, only: [:index, :show] 
 
     def index
         @wrestlers = Wrestler.sort_wrestler_by_name
