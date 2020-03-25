@@ -7,9 +7,29 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
+  <div class="ui inverted segment">
+    <div class="ui inverted secondary menu">
+      <a class="item" href="/users"> 
+        User Pages 
+      </a>
+      <a class="item" href="/wrestlers">
+        Wrestler Pages
+      </a>
+      <a class="item href="/moves"">
+        Move Pages
+      </a>
+    </div>
+  </div>
+
+
+
+
     <%= yield %>
   </body>
 </html>
