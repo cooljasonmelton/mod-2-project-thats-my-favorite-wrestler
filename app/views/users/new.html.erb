@@ -1,5 +1,11 @@
 <h1> Create a User Page </h1>
 
+<% if @errors %>
+    <% @errors.each do |error| %>
+        <p><%= error %></p>
+    <% end %>
+<% end %>
+
 <%= form_for @user do |f| %>
     <%= f.label :name, 'Username:' %><br>
     <%= f.text_field :name %><br>
@@ -11,5 +17,8 @@
     <%= f.password_field :password %><br>
     <%= f.submit %>
 <% end %>
+<hr>
+<h3>Already have a user page? <%= button_to "Login", '/login', method: :get%></h3>
+
 
 

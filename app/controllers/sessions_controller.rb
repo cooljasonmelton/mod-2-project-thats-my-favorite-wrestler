@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     render :index
   end 
 
-  def new    
+  def new
   end
 
  
@@ -14,14 +14,18 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         redirect_to user_path(@user)
     else
-        redirect_to '/login'
+        flash[:no_match] = "Invalid Username or Password"
+        render :new
     end
   end
+
 
   def destroy
     session[:user_id] = nil
     redirect_to login_path
   end
+
+
 
   
 

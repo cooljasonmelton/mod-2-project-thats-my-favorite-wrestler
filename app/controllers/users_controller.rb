@@ -4,9 +4,11 @@ class UsersController < ApplicationController
     
     def index
         @users = User.all
+        get_current_user
     end 
 
     def show
+        get_current_user.reload
         find_user
     end 
 
@@ -21,18 +23,35 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else 
-            #@errors 
+            @errors = @user.errors.full_messages
             render :new
         end 
     end 
 
     def edit
+        @user = get_current_user
     end
 
     def update
+        @user = get_current_user
+        @user.assign_attributes(user_params)
+        if @user.valid?
+            @user.save
+            redirect_to user_path(@user)
+        else 
+            @errors = @user.errors.full_messages
+            render :edit
+        end 
     end
 
+    def areyousure
+        get_current_user
+        render :areyousure
+    end 
+
     def destroy
+        get_current_user.destroy
+        redirect_to '/'
     end 
 
     private
@@ -43,4 +62,9 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name, :bio, :email, :password)
     end
+
+    def get_current_user
+        @current_user = User.find_by(id: session[:user_id])
+    end 
+
 end

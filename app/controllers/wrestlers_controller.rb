@@ -7,6 +7,8 @@ class WrestlersController < ApplicationController
     end 
 
     def show
+        get_current_user
+        session[:wrestler_id] = params[:id]
         find_wrestler
     end 
 
@@ -47,6 +49,10 @@ class WrestlersController < ApplicationController
 
     def wrestler_params
         params.require(:wrestler).permit(:name, :bio, :img_url)
+    end 
+
+    def get_current_user
+        @current_user = User.find_by(id: session[:user_id])
     end 
 
 end
