@@ -9,10 +9,6 @@ class FavoriteMovesController < ApplicationController
         @favorite_move = FavoriteMove.new
     end
 
-    def add_move
-        current_user << Move.find(params[:id])
-    end
-
     def create
         @favorite_move = FavoriteMove.new
     end 

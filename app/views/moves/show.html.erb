@@ -2,13 +2,7 @@
 <h1>Name: <%= @move.name %></h1>
 <h3>Description: <%= @move.description %></h3>
 
-<%= button_to "Add to Favorites!", add_move_path, method: :post %><br>
-<%= form_tag '/favorite_moves' do %>
-    <%= label_tag 'favorite[rating]', 'Rate Move:' %> 
-    <%= number_field_tag 'favorite[rating]' %>
-    <%= submit_tag "Add to favorites!" %>
-<% end %>
-
+<!--button to add to favorite-->
 
 <img src=<%= @move.img_url %> alt="move" >
 <p><%= link_to "Edit #{@move.name}", edit_move_path %> </p>
