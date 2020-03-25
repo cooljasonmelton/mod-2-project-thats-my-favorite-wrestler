@@ -6,5 +6,5 @@
 
 
 <% if @current_user %>
-    <%= button_to "Sign out", logout_path, data: { method: :delete } %>
+    <%= button_to "Sign out", logout_path, method: :delete %>
 <% end %>

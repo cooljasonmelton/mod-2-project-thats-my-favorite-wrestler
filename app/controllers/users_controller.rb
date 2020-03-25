@@ -29,12 +29,20 @@ class UsersController < ApplicationController
     end 
 
     def edit
+        @user = get_current_user
     end
 
     def update
     end
 
+    def areyousure
+        get_current_user
+        render :areyousure
+    end 
+
     def destroy
+        get_current_user.destroy
+        redirect_to '/'
     end 
 
     private
