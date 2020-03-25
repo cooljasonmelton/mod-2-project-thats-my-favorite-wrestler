@@ -1,0 +1,12 @@
+
+<h1>Name: <%= @wrestler.name %></h1>
+<h3>Bio: <%= @wrestler.bio %></h3>
+<img src=<%= @wrestler.img_url %> alt="wrestler" ismap>
+<p><%= link_to "Edit #{@wrestler.name}", edit_wrestler_path %> </p>
+
+
+<p><%= link_to "Back to Wrestler Profiles", wrestlers_path %> </p>
+
+
+
+
