@@ -1,10 +1,19 @@
+<% if @current_user.id == @user.id %>
+    <h3> Welcome back! </h3>
+<% end %>
 
 <h1>Name: <%= @user.name %></h1>
 <h1>Bio: <%= @user.bio %></h1>
 
+<!--
 #show their fav wrestlers
 #show their fav moves
+-->
 
-<p><%= link_to "Back to User Profiles", users_path %> </p>
-<p><%= link_to "Sign out", logout_path, data: { method: :delete } %></p>
+<p><%= link_to "See User Profiles", users_path %> * <%= link_to "See Wrestlers", wrestlers_path %> * <%= link_to "See Moves", moves_path %> </p>
+
+<% if @current_user.id == @user.id %>
+    <%= button_to "Sign out", logout_path, data: { method: :delete } %>
+<% end %>
+
 

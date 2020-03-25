@@ -5,3 +5,6 @@
 <% end %>
 
 
+<% if @current_user %>
+    <%= button_to "Sign out", logout_path, data: { method: :delete } %>
+<% end %>

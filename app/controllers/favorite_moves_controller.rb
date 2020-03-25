@@ -1,2 +1,4 @@
 class FavoriteMovesController < ApplicationController
+
+    
 end
