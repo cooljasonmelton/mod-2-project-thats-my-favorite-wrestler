@@ -1,0 +1,13 @@
+<h1> Rate this Wrestler! </h1>
+
+<%= form_tag '/favorite_wrestlers' do %>
+    <%= label_tag 'favorite[rating]', 'Rate Wrestler:' %> 
+    <%= number_field_tag 'favorite[rating]' %><br>
+    <%= label_tag 'favorite[comments]', 'Comments:' %>
+    <%= text_area_tag 'favorite[comments]' %>
+    <%= submit_tag "Add!" %>
+<% end %>
+
+<p><%= link_to "Back to Wrestlers", wrestlers_path %> </p>
+
+

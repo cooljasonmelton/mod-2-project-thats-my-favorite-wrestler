@@ -1,4 +1,8 @@
 <h1> Favorite Move Feed! </h1>
+<p><%= link_to "See User Profiles", users_path %> * <%= link_to "See Wrestlers", wrestlers_path %> * <%= link_to "See Moves", moves_path %> </p>
+
+<ul>
 <% @favorite_moves.each do |fav|%>
-    <%= "One of #{fav.user.name}'s favorite moves is the #{fav.move.name}. #{fav.user.name} gives it a #{fav.rating}." %><br>
+    <li><%= "One of #{fav.user.name}'s favorite moves is the #{fav.move.name}. #{fav.user.name} gives it a rating of #{fav.rating}." %></li>
 <% end %>
+</ul>

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     end 
 
     def show
-        get_current_user
+        get_current_user.reload
         find_user
     end 
 
@@ -33,6 +33,15 @@ class UsersController < ApplicationController
     end
 
     def update
+        @user = get_current_user
+        @user.assign_attributes(user_params)
+        if @user.valid?
+            @user.save
+            redirect_to user_path(@user)
+        else 
+            @errors = @user.errors.full_messages
+            render :edit
+        end 
     end
 
     def areyousure

@@ -5,17 +5,48 @@
 <h1>Name: <%= @user.name %></h1>
 <h1>Bio: <%= @user.bio %></h1>
 
-<!--
-#show their fav wrestlers
-#show their fav moves
--->
+<!-- highest rated wrestlers -->
 
-<p><%= link_to "See User Profiles", users_path %> * <%= link_to "See Wrestlers", wrestlers_path %> * <%= link_to "See Moves", moves_path %> </p>
+<h3> Top 5 Highest Rated Wrestlers! </h3>
+
+<% if @user.user_fav_moves_top_five_rated == [] %>
+    <p> User hasn't added any favorites yet. </p>
+<% else %>
+    <ol>
+        <% @user.user_fav_wrestlers_top_five_rated.each do |fav| %>
+            <li>
+                <%=fav.wrestler.name%> -- Rating: <%=fav.rating%>
+            </li>
+        <% end %>
+    </ol>
+<% end %>
+<%= link_to "See Wrestlers", wrestlers_path %>
+
+<!-- highest rated moves -->
+
+<h3> Top 5 Highest Rated Moves! </h3>
+
+<%if @user.user_fav_moves_top_five_rated == []%>
+    <p>User hasn't added any favorites yet.</p>
+<% else %>
+    <ol>
+        <% @user.user_fav_moves_top_five_rated.each do |fav| %>
+            <li>
+                <%=fav.move.name%> -- Rating: <%=fav.rating%>
+            </li>
+        <% end %>
+    </ol>
+<% end %>
+<%= link_to "See Moves", moves_path %>
+
+
+
+<p><%= link_to "See User Profiles", users_path %></p>
 
 <% if @current_user.id == @user.id %>
-    <%= button_to "Sign out", logout_path, method: :delete %>
+    <%= button_to "Update User Page", edit_user_path, method: :get %>
+    <%= button_to "Sign Out", logout_path, method: :delete %>
     <%= button_to "Delete User Page", areyousure_path, method: :get %>
-
 <% end %>
 
 

@@ -1,8 +1,16 @@
 
 <h1>Name: <%= @wrestler.name %></h1>
 <h3>Bio: <%= @wrestler.bio %></h3>
+
+<% if @current_user %>
+<%= button_to "Add to Favorites", new_favorite_wrestler_path, method: :get%><br>
+<% end %>
+
 <img src=<%= @wrestler.img_url %> alt="wrestler" ismap>
+
+<% if @current_user %>
 <p><%= link_to "Edit #{@wrestler.name}", edit_wrestler_path %> </p>
+<% end %>
 
 
 <p><%= link_to "Back to Wrestler Profiles", wrestlers_path %> </p>
