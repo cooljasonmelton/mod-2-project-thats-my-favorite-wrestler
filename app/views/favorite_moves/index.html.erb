@@ -1,4 +1,4 @@
 <h1> Favorite Move Feed! </h1>
 <% @favorite_moves.each do |fav|%>
-    <%= "One of #{fav.user.name}'s favorite moves is the #{fav.move.name}" %>
+    <%= "One of #{fav.user.name}'s favorite moves is the #{fav.move.name}. #{fav.user.name} gives it a #{fav.rating}." %><br>
 <% end %>
