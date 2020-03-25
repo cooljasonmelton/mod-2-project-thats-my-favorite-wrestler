@@ -3,10 +3,12 @@ class MovesController < ApplicationController
     skip_before_action :authorized, only: [:index, :show]
 
     def index
+        current_user
         @moves = Move.sort_move_by_name
     end 
 
     def show
+        current_user 
         find_move
     end 
 

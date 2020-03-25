@@ -1,0 +1,11 @@
+<h1> Rate this Move! </h1>
+
+<%= form_tag '/favorite_moves' do %>
+    <%= label_tag 'favorite[rating]', 'Rate Move:' %> 
+    <%= number_field_tag 'favorite[rating]' %>
+    <%= submit_tag "Add!" %>
+<% end %>
+
+<p><%= link_to "Back to Wrestling Moves", moves_path %> </p>
+
+
