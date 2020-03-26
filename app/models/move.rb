@@ -23,12 +23,14 @@ class Move < ApplicationRecord
         ratings.sum / ratings.length.to_f
     end 
 
+
     def get_move_comments
         move_comments = get_move_favs.map do |fav|
             "#{fav.user.name} commented: #{fav.comments}"
         end 
         move_comments.reverse
     end 
+
 
 
 
