@@ -1,11 +1,13 @@
+<div class="index">
+
+<h1> User Profiles: </h1>
+
 <% if @current_user %>
     <%= button_to "Sign Out", logout_path, method: :delete %>
 <% end %>
 
-<h1> User Profiles: </h1>
-
 <% @users.each do |user| %>
 <h3> <%= link_to user.name, user_path(user.id) %> </h3>
 <% end %>
-
+</div>
 

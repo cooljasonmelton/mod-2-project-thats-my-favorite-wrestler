@@ -15,8 +15,20 @@
  */
 
 .center {
+  background-color: #008080;
   margin: auto;
-  width: 50%;
+  width: 70%;
   padding: 10px;
 }
+.pages {
+  background-color: white;
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+}
+.index {
+  text-align: center 
+
+}
+/* background-color: #B8580E; */
 
