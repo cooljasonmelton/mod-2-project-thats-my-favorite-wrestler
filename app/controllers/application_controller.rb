@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     end
 
     def authorized
-        flash[:error] = "Before doing that, please Sign In or Create a User Page!"
+        flash[:error] = "Please Sign In or Create a User Page!"
         redirect_to '/' unless logged_in?
     end
 end
