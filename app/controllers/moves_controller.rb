@@ -4,7 +4,6 @@ class MovesController < ApplicationController
 
     def index
         @moves = Move.sort_move_by_name
-        @random_move = Move.random_sample
         get_random_move
     end 
 
