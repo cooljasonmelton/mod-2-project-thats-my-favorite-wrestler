@@ -1,10 +1,11 @@
 <div class="index">
 
 <h1> Wrestlers </h1>
+
+<p><%= link_to "Add a Wrestler to the Website", new_wrestler_path %>//<%= link_to "Random Wrestler!", wrestler_path(@random_wrestler)%></p>
+
 <% @wrestlers.each do |wrestler| %>
 <h3> <%= link_to wrestler.name, wrestler_path(wrestler.id) %> </h3>
 <% end %>
-
-<p><%= link_to "Add a Wrestler to the Website", new_wrestler_path %>//<%= link_to "Random Wrestler!", wrestler_path(@random_wrestler)%></p>
 
 </div>

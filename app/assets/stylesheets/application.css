@@ -27,8 +27,15 @@
   padding: 20px;
 }
 .index {
-  text-align: center 
+  text-align: center;
+  list-style: inside;
 
 }
-/* background-color: #B8580E; */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
 

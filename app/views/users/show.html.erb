@@ -1,3 +1,4 @@
+<div class="index">
 <% if @current_user.id == @user.id %>
     <h3> Welcome! </h3>
 <% end %>
@@ -5,11 +6,15 @@
 <h1>Name: <%= @user.name %></h1>
 <h1>Bio: <%= @user.bio %></h1>
 
+<% unless @user.user_fav_wrestlers_top_five_rated == [] %>
+    <img src="<%=@user.user_fav_wrestlers_top_five_rated[0].wrestler.img_url%>" align="middle" alt="wrestler">
+<% end %>
+
 <!-- highest rated wrestlers -->
 
 <h3> Top 5 Highest Rated Wrestlers! </h3>
 
-<% if @user.user_fav_moves_top_five_rated == [] %>
+<% if @user.user_fav_wrestlers_top_five_rated == [] %>
     <p> User hasn't added any favorites yet. </p>
 <% else %>
     <ol>
@@ -42,8 +47,9 @@
 
 <% if @current_user.id == @user.id %>
     <%= button_to "Update User Page", edit_user_path, method: :get %>
-    <%= button_to "Sign Out", logout_path, method: :delete %>
     <%= button_to "Delete User Page", areyousure_path, method: :get %>
 <% end %>
+
+</div>
 
 

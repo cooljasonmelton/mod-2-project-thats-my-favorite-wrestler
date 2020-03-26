@@ -30,9 +30,15 @@
       <a class="item" href="/favorite_moves">
         Favorite Move Feed
       </a>
+      <a class="item" href="/users/<%=session[:user_id]%>">
+        My User Page
+      </a>
     </div>
   </div>
-
+  <div style="float:right">
+      <%= button_to "Sign Out", logout_path, method: :delete, class: 'ui button'  %>
+  </div>
+  
 
   
 
