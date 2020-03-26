@@ -1,4 +1,4 @@
-<p><%= link_to "Add a Wrestler to the Website", new_wrestler_path %> * <%= link_to "See List of Moves", moves_path %> </p>
+<p><%= link_to "Add a Wrestler to the Website", new_wrestler_path %>//<%= link_to "Random Wrestler!", wrestler_path(@random_wrestler)%></p>
 
 <h1> Wrestlers </h1>
 <% @wrestlers.each do |wrestler| %>

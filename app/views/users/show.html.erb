@@ -37,11 +37,8 @@
         <% end %>
     </ol>
 <% end %>
-<%= link_to "See Moves", moves_path %>
-
-
-
-<p><%= link_to "See User Profiles", users_path %></p>
+<%= link_to "See Moves", moves_path %><br><br>
+<hr>
 
 <% if @current_user.id == @user.id %>
     <%= button_to "Update User Page", edit_user_path, method: :get %>
