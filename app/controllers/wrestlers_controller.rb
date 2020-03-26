@@ -4,12 +4,14 @@ class WrestlersController < ApplicationController
 
     def index
         @wrestlers = Wrestler.sort_wrestler_by_name
+        get_random_wrestler
     end 
 
     def show
         get_current_user
         session[:wrestler_id] = params[:id]
         find_wrestler
+        get_random_wrestler
     end 
 
     def new
@@ -22,7 +24,7 @@ class WrestlersController < ApplicationController
             @wrestler.save
             redirect_to wrestler_path(@wrestler)
         else 
-            # @errors
+            @errors = @wrestler.errors.full_messages
             render :new
         end 
     end 
@@ -37,7 +39,7 @@ class WrestlersController < ApplicationController
             @wrestler.save
             redirect_to wrestler_path(@wrestler)
         else 
-            # @errors
+            @errors = @wrestler.errors.full_messages
             render :new
         end 
     end
@@ -55,4 +57,7 @@ class WrestlersController < ApplicationController
         @current_user = User.find_by(id: session[:user_id])
     end 
 
+    def get_random_wrestler
+        @random_wrestler = Wrestler.random_sample
+    end
 end

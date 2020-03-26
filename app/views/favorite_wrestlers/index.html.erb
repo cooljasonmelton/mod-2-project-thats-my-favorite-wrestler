@@ -3,6 +3,7 @@
 <ul>
     <% @favorite_wrestlers.each do |fav|%>
         <li><h4><%= "One of #{fav.user.name}'s favorite wrestlers is #{fav.wrestler.name}. #{fav.user.name} gives them a rating of #{fav.rating}." %></h4></li>
+        <h3> <%= link_to fav.wrestler.name, wrestler_path(fav.wrestler) %> </h3>
         <img src=<%= fav.wrestler.img_url %> alt="wrestler" >
     <% end %>
 </ul>
