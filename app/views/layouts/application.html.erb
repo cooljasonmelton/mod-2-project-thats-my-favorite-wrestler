@@ -7,12 +7,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
   </head>
 
-  <body>
+  <body class="center">
   <div class="ui inverted segment">
     <div class="ui inverted secondary menu">
       <a class="item" href="/users"> 
@@ -21,8 +21,14 @@
       <a class="item" href="/wrestlers">
         Wrestler Pages
       </a>
-      <a class="item href="/moves"">
+      <a class="item" href="/moves"">
         Move Pages
+      </a>
+      <a class="item" href="/favorite_wrestlers"">
+        Favorite Wrestler Feed
+      </a>
+      <a class="item" href="/favorite_moves"">
+        Favorite Move Feed
       </a>
     </div>
   </div>
