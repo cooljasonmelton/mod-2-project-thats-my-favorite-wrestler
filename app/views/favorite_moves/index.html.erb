@@ -4,6 +4,6 @@
 <% @favorite_moves.each do |fav|%>
     <li><h4><%= "One of #{fav.user.name}'s favorite moves is the #{fav.move.name}. #{fav.user.name} gives it a rating of #{fav.rating}." %></h4></li>
     <h3> <%= link_to fav.move.name, move_path(fav.move.id) %> </h3>
-    <img src=<%= fav.move.img_url %> alt="move" >
+    <img src=<%= fav.move.img_url %> alt="move" ><br><br><br><br>
 <% end %>
 </ul>
