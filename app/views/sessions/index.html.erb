@@ -1,11 +1,14 @@
 <div class="index">
+    <div style="color:red;">
+    <%= flash[:error] %>
+    </div>
+    <h3>Welcome to:</h3>
+    <h1>That's My Favorite Wrestler</h1>
 
-<h3>Welcome to:</h3>
-<h1>That's My Favorite Wrestler</h1>
 
-<%= flash[:error] %>
-
-<%= button_to "Sign In", '/login', method: :get%>
-<%= button_to "Create a User Page", '/users/new', method: :get%>
+    <%= link_to "Sign In", '/login', method: :get, class: "ui left attached button"%>
+    <%= link_to "New User", '/users/new', method: :get, class: "right attached ui button"%>
+    <br><br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Christopher_Daniels_1.jpg/1024px-Christopher_Daniels_1.jpg" alt="pic of wrestling">
 
 </div>

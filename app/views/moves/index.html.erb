@@ -1,9 +1,10 @@
 <div class="index">
 
+
+<%= link_to "Add New Move", new_move_path,:class => "ui left attached button" %>
+<%= link_to "Random Move!", move_path(@random_move), :class => "ui right attached button" %>
+
 <h1> Moves:</h1>
-
-<p><%= link_to "Add a Move to the Website", new_move_path %> // <%= link_to "Random Move!", move_path(@random_move) %> </p>
-
 
 <% @moves.each do |move| %>
 <h3> <%= link_to move.name, move_path(move.id) %> </h3>
