@@ -48,8 +48,9 @@
 <hr>
 
 <% if @current_user.id == @user.id %>
-    <%= button_to "Update User Page", edit_user_path, method: :get %>
-    <%= button_to "Delete User Page", areyousure_path, method: :get %>
+    <%= link_to "Update User Page", edit_user_path, method: :get, class: "ui left attached button"%>
+    <%= link_to "Delete User Page", areyousure_path, method: :get, class: "right attached ui button" %>
+    
 <% end %>
 
 </div>

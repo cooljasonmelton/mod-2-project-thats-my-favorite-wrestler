@@ -10,11 +10,11 @@
     <%= text_field_tag :name %>
     <%= label_tag :password, "Password:" %>
     <%= password_field_tag :password %>
-    <%= submit_tag "Sign In" %>
+    <%= submit_tag "Sign In", class: "mini ui button" %>
 <% end %>
 <br>
 <hr>
 <h3> Need a User Page? </h3>
-<%= button_to "Create a User Page", '/users/new', method: :get%>
+<%= button_to "Create a User Page", '/users/new', method: :get, class: "ui button"%>
 
 </div>
