@@ -20,6 +20,4 @@ class FavoriteMovesController < ApplicationController
     def get_move_params
         params.require(:favorite).permit(:rating, :comments)        
     end 
-    
-
 end
