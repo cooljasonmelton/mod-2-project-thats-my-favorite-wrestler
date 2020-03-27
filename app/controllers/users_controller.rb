@@ -51,6 +51,8 @@ class UsersController < ApplicationController
 
     def destroy
         get_current_user.destroy
+        FavoriteMove.clean_out_database
+        FavoriteWrestler.clean_out_database
         redirect_to '/'
     end 
 
