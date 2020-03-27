@@ -1,23 +1,25 @@
-<%= link_to "Random Wrestler!", wrestler_path(@random_wrestler) %>
-<h1>Name: <%= @wrestler.name %></h1>
-<h3>Bio: <%= @wrestler.bio %></h3>
-<h3>Average User Rating: <%= @wrestler.wrestler_average_rating %></h3>
+<div class="index">
+    <%= link_to "Random Wrestler!", wrestler_path(@random_wrestler) %>
+    <h1>Name: <%= @wrestler.name %></h1>
+    <h3>Bio: <%= @wrestler.bio %></h3>
+    <h3>Average User Rating: <%= @wrestler.wrestler_average_rating %></h3>
 
 
-<% if @current_user %>
-<%= button_to "Add to Favorites", new_favorite_wrestler_path, method: :get%><br>
-<% end %>
+    <% if @current_user %>
+    <%= button_to "Add to Favorites", new_favorite_wrestler_path, method: :get%><br>
+    <% end %>
 
-<img src=<%= @wrestler.img_url %> alt="wrestler" ismap>
+    <img src=<%= @wrestler.img_url %> alt="wrestler" ismap>
 
-<% if @current_user %>
-<p><%= link_to "Edit #{@wrestler.name}", edit_wrestler_path %> </p>
-<% end %>
+    <% if @current_user %>
+    <p><%= link_to "Edit #{@wrestler.name}", edit_wrestler_path %> </p>
+    <% end %>
 
-<h3>Comment Feed!</h3>
-<% @wrestler.get_wrestler_comments.each do |comment| %>
-    <p><%= comment %></p>
-<% end %>
+    <h3>Comment Feed!</h3>
+    <% @wrestler.get_wrestler_comments.each do |comment| %>
+        <p><%= comment %></p>
+    <% end %>
+</div>
 
 
 

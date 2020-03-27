@@ -1,18 +1,22 @@
-<%= link_to "Random Move!", move_path(@random_move) %>
-<h1>Name: <%= @move.name %></h1>
-<h3>Description: <%= @move.description %></h3>
-<h3>Average User Rating: <%= @move.move_average_rating %></h3>
-<% if @current_user %>
-<%= button_to "Add to Favorites", new_favorite_move_path, method: :get%><br>
-<% end %>
+<div class="index">
 
-<img src=<%= @move.img_url %> alt="move" >
+    <%= link_to "Random Move!", move_path(@random_move) %>
+    <h1>Name: <%= @move.name %></h1>
+    <h3>Description: <%= @move.description %></h3>
+    <h3>Average User Rating: <%= @move.move_average_rating %></h3>
+    <% if @current_user %>
+    <%= button_to "Add to Favorites", new_favorite_move_path, method: :get%><br>
+    <% end %>
 
-<% if @current_user %>
-<p><%= link_to "Edit #{@move.name}", edit_move_path %> </p>
-<% end %>
+    <img src=<%= @move.img_url %> alt="move" >
 
-<h3>Comment Feed!</h3>
-<% @move.get_move_comments.each do |comment| %>
-    <p><%= comment %></p>
-<% end %>
+    <% if @current_user %>
+    <p><%= link_to "Edit #{@move.name}", edit_move_path %> </p>
+    <% end %>
+
+    <h3>Comment Feed!</h3>
+    <% @move.get_move_comments.each do |comment| %>
+        <p><%= comment %></p>
+    <% end %>
+
+</div>

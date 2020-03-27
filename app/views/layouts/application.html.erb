@@ -13,28 +13,40 @@
   </head>
 
   <body class="center">
-  <div class="ui inverted segment">
-    <div class="ui inverted secondary menu">
-      <a class="item" href="/users"> 
-        User Pages 
-      </a>
-      <a class="item" href="/wrestlers">
-        Wrestler Pages
-      </a>
-      <a class="item" href="/moves">
-        Move Pages
-      </a>
-      <a class="item" href="/favorite_wrestlers">
-        Favorite Wrestler Feed
-      </a>
-      <a class="item" href="/favorite_moves">
-        Favorite Move Feed
-      </a>
-      <a class="item" href="/users/<%=session[:user_id]%>">
-        My User Page
-      </a>
+
+  <div id="title">
+    <div class="ui inverted segment">
+      <h1 class="ui blue inverted header">THAT'S MY FAVORITE WRESTLER</h1>
     </div>
   </div>
+    
+
+
+  <div id="title">
+    <div class="ui inverted segment">
+      <div class="ui inverted secondary menu">
+        <a class="item" href="/users"> 
+          User Pages 
+        </a>
+        <a class="item" href="/wrestlers">
+          Wrestler Pages
+        </a>
+        <a class="item" href="/moves">
+          Move Pages
+        </a>
+        <a class="item" href="/favorite_wrestlers">
+          Favorite Wrestler Feed
+        </a>
+        <a class="item" href="/favorite_moves">
+          Favorite Move Feed
+        </a>
+        <a class="item" href="/users/<%=session[:user_id]%>">
+          My User Page
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div style="float:right">
       <%= button_to "Sign Out", logout_path, method: :delete, class: 'ui button'  %>
   </div>

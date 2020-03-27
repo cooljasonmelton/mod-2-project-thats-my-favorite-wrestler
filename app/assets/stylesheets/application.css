@@ -21,12 +21,17 @@
   padding: 10px;
 }
 
+#title {
+  text-align: center;
+  justify-content: center;
+
+}
+
 .index {
   padding-left: 40px;
   text-align: center;
   list-style-position: inside;
 }
-
 
 .pages {
   background-color: white;

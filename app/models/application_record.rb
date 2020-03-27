@@ -12,6 +12,14 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end 
 
+  def self.clean_out_database
+    self.all.each do |fav|
+      if fav.user == nil
+        fav.update(user_id: 1)
+      end 
+    end
+  end
+
 
   #highest average rating from favorite
   #return an id with the highest average rating
