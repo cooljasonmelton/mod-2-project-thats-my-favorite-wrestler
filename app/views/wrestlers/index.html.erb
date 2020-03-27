@@ -1,11 +1,12 @@
 <div class="index">
 
-<h1> Wrestlers </h1>
+    <%= link_to "Add New Wrestler!", new_wrestler_path, :class => "ui left attached button" %>
+    <%= link_to "Random Wrestler!", wrestler_path(@random_wrestler), :class => "right attached ui button"%>
 
-<p><%= link_to "Add a Wrestler to the Website", new_wrestler_path %>//<%= link_to "Random Wrestler!", wrestler_path(@random_wrestler)%></p>
+    <h1> Wrestlers </h1>
 
-<% @wrestlers.each do |wrestler| %>
-<h3> <%= link_to wrestler.name, wrestler_path(wrestler.id) %> </h3>
-<% end %>
+    <% @wrestlers.each do |wrestler| %>
+    <h3> <%= link_to wrestler.name, wrestler_path(wrestler.id) %> </h3>
+    <% end %>
 
 </div>
