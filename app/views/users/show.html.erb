@@ -7,7 +7,9 @@
 <h1>Bio: <%= @user.bio %></h1>
 
 <% unless @user.user_fav_wrestlers_top_five_rated == [] %>
-    <img src="<%=@user.user_fav_wrestlers_top_five_rated[0].wrestler.img_url%>" align="middle" alt="wrestler">
+    <div>
+        <img style="padding:-40px" src="<%=@user.user_fav_wrestlers_top_five_rated[0].wrestler.img_url%>" alt="wrestler">
+    </div>
 <% end %>
 
 <!-- highest rated wrestlers -->
