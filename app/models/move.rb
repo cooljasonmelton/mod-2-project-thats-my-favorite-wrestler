@@ -3,7 +3,6 @@ class Move < ApplicationRecord
     has_many :users, through: :favorite_moves
     validates :name, :description, :presence => true
 
-
     def self.sort_move_by_name
         self.all.sort do |a, b|
             a.name <=> b.name
@@ -23,16 +22,10 @@ class Move < ApplicationRecord
         ratings.sum / ratings.length.to_f
     end 
 
-
     def get_move_comments
         move_comments = get_move_favs.map do |fav|
             "#{fav.user.name} commented: #{fav.comments}"
         end 
         move_comments.reverse
     end 
-
-
-
-
-
 end
