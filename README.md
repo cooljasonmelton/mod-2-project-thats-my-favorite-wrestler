@@ -3,7 +3,8 @@
 
 # That's My Favorite Wrestler
 ​​
-A Ruby on Rails social media application for celebrating pro-wrestling, allowing users to rate and comment on their favorite wrestlers and moves.
+* A Ruby on Rails social media application for celebrating pro-wrestling, allowing users to rate and comment on their favorite wrestlers and moves.
+
 ![demo-of-app](https://github.com/cooljasonmelton/mod-2-project-thats-my-favorite-wrestler/blob/master/Animated%20GIF-downsized_large.gif?raw=true)​
 
 ## Application Features
@@ -35,7 +36,7 @@ rails server
 ## Contributing
 [CONTRIBUTING.md](https://github.com/cooljasonmelton/mod-2-project-thats-my-favorite-wrestler)
 ​
-# Created by **Jason Melton**
+### Created by **Jason Melton**
 ​
 ## License
 [LICENSE.md](LICENSE.md)
