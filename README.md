@@ -33,8 +33,9 @@ rails server
 ```
 4. Navigate to <a href='http://localhost:3000/'> http://localhost:3000/ </a>
 ​​
-## Created by Jason Melton
-​
+## Author
+<a href='https://github.com/cooljasonmelton'> Jason Melton</a>
+
 ## Acknowledgments
 * Special thanks to Derek Castillo and Duke Greene for insights and guidance.
 
