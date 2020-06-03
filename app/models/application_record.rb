@@ -1,5 +1,6 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
+  
   #get a random instance from class
   def self.random_sample
     self.all.sample
@@ -12,6 +13,8 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end 
 
+  #use when someone deletes their profile to change all their favs to Jason's favs
+  #can be altered to destroy their favs instead
   def self.clean_out_database
     self.all.each do |fav|
       if fav.user == nil
@@ -19,29 +22,6 @@ class ApplicationRecord < ActiveRecord::Base
       end 
     end
   end
-
-
-  #highest average rating from favorite
-  #return an id with the highest average rating
-  # def self.highest_average_rating
-  #   self.all.max do |a, b|
-  #     a.where(wrestler_id: a.wrestler_id).average(:rating) <=> b.where(wrestler_id: b.wrestler_id).average(:rating)
-  #   end 
-
-     
-
-
-
-
-  # end 
-
-
-
-
-
-
-
-
 
 
 end

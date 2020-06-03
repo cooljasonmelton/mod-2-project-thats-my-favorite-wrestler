@@ -7,6 +7,7 @@ class User < ApplicationRecord
     validates :name, uniqueness: { case_sensitive: false }
     has_secure_password
 
+#next three methods find a users top 5 moves
     def user_favorite_moves
         FavoriteMove.all.select do |fav|
             fav.user == self 
@@ -23,7 +24,7 @@ class User < ApplicationRecord
         user_fav_move_by_rating.reverse[0..4]
     end 
 
-
+#next three methods find a users top 5 wrestlers
     def user_favorite_wrestlers
         FavoriteWrestler.all.select do |fav|
             fav.user == self 
@@ -38,9 +39,5 @@ class User < ApplicationRecord
 
     def user_fav_wrestlers_top_five_rated
         user_fav_wrestler_by_rating.reverse[0..4]
-    end 
-
-
-
-    
+    end     
 end

@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method :logged_in?
-    helper_method :authorized
+    helper_method :logged_in?, :authorized
 
     def current_user    
         User.find_by(id: session[:user_id])  

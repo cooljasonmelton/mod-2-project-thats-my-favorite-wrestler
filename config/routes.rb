@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   resources :users
   resources :favorite_moves, only: [:index, :new, :create]
   resources :favorite_wrestlers, only: [:index, :new, :create]
-
-
-  post 'add_move', to: 'favorite_moves#add_move'
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
