@@ -33,11 +33,12 @@ rails server
 ```
 4. Navigate to <a href='http://localhost:3000/'> http://localhost:3000/ </a>
 ​
+## Created by 
+* Jason Melton
+
 ## Contributing
 [CONTRIBUTING.md](https://github.com/cooljasonmelton/mod-2-project-thats-my-favorite-wrestler)
-​
-### Created by **Jason Melton**
-​
+​​
 ## License
 [LICENSE.md](LICENSE.md)
 ​
