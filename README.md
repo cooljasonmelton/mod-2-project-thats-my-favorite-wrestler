@@ -32,15 +32,8 @@ rails db:migrate
 rails server
 ```
 4. Navigate to <a href='http://localhost:3000/'> http://localhost:3000/ </a>
-​
-## Created by 
-* Jason Melton
-
-## Contributing
-[CONTRIBUTING.md](https://github.com/cooljasonmelton/mod-2-project-thats-my-favorite-wrestler)
 ​​
-## License
-[LICENSE.md](LICENSE.md)
+## Created by Jason Melton
 ​
 ## Acknowledgments
 * Special thanks to Derek Castillo and Duke Greene for insights and guidance.
