@@ -3,7 +3,7 @@
 
 ![demo-of-app](https://github.com/cooljasonmelton/mod-2-project-thats-my-favorite-wrestler/blob/master/Animated%20GIF-downsized_large.gif?raw=true)​
 
-<a href="https://www.youtube.com/watch?v=WlEW77YZy_M&t=7s"> Demo </a>
+<a href="https://www.youtube.com/watch?v=WlEW77YZy_M"> Demo </a>
 
 ## Application Features
 * Rate and comment on favorite wrestlers and moves​​
